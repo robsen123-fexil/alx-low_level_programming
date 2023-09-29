@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _strlen_recursion - returns the length of a string.
- * @s: string
- * Return: the length of a string.
+ * _strlen_recursion - returning  the string length.
+ * @s: strings
+ * Return: the string length.
  */
 int _strlen_recursion(char *s)
 {
@@ -14,11 +14,11 @@ int _strlen_recursion(char *s)
 }
 
 /**
- * comparator - compares each character of the string.
+ * comparator - compares every characters in string.
  * @s: string
- * @n1: smallest iterator.
- * @n2: biggest iterator.
- * Return: .
+ * @n1: tinest increamtor.
+ * @n2: largest increamtor.
+ * Return:  . 
  */
 int comparator(char *s, int n1, int n2)
 {
@@ -32,9 +32,9 @@ int comparator(char *s, int n1, int n2)
 }
 
 /**
- * is_palindrome - detects if a string is a palindrome.
+ * is_palindrome - identifies if a the strings are  palindrome.
  * @s: string.
- * Return: 1 if s is a palindrome, 0 if not.
+ * Return: 1 if s is a palindrome, 0 else (if not).
  */
 int is_palindrome(char *s)
 {
