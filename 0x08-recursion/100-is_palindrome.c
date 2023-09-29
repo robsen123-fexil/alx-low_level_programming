@@ -18,7 +18,7 @@ int _strlen_recursion(char *s)
  * @s: string
  * @n1: tinest increamtor.
  * @n2: largest increamtor.
- * Return:. 
+ * Return: . 
  */
 int comparator(char *s, int n1, int n2)
 {
