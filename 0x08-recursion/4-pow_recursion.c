@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * _pow_recursion - calculate the x power of y
- * @x: value for variale 1
- * @y: value for the variable 2
- * Return: the value of x power y
+ * _pow_recursion - calculating  the x pow of y
+ * @x: value of variale 1
+ * @y: value of   variable 2
+ * Return:  value of x pow y
  */
 int _pow_recursion(int x, int y)
 {
