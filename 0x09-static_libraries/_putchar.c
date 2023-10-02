@@ -4,15 +4,15 @@
 
 /**
  *
- *  * _putchar - writing  character c for  stdout
+ *  * _putchar - writes the character c to stdout
  *
- *   * @c: character to prints
+ *   * @c: The character to print
  *
  *    *
  *
- *     * Return: On successed 1.
+ *     * Return: On success 1.
  *
- *      * On error, -1 is return, and errno are set appropriately*/
+ *      * On error, -1 is returned, and errno is set appropriately*/
 
 int _putchar(char c)
 
