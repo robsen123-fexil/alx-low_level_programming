@@ -28,12 +28,12 @@ int main(int argc, char **argv)
 	{
 		while (tot > 1)
 		{
-			for (i = 0; i < sizeof(cents[i]); i++)
+			for (k = 0; k < sizeof(cents[k]); k++)
 			{
-				if (tot >= cents[i])
+				if (tot >= cents[k])
 				{
-					counts += tot / cents[i];
-					tot = tot % cents[i];
+					counts += tot / cents[k];
+					tot = tot % cents[k];
 				}
 			}
 		}
