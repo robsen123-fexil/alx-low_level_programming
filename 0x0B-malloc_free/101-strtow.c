@@ -2,76 +2,76 @@
 #include "main.h"
 
 /**
- * print_tab - Prints an array of string
- * @tab: The array to print
+ * count_word - helper function to count the number of words in a string
+ * @s: string to evaluate
  *
- * Return: nothing
+ * Return: number of words
  */
 int count_word(char *s)
 {
-	int flg, e, x;
+	int flag, c, w;
 
-	flg = 0;
-	x = 0;
+	flag = 0;
+	w = 0;
 
-	for (e = 0; s[e] != '\0'; e++)
+	for (c = 0; s[c] != '\0'; c++)
 	{
-		if (s[e] == ' ')
-			flg = 0;
-		else if (flg == 0)
+		if (s[c] == ' ')
+			flag = 0;
+		else if (flag == 0)
 		{
-			flg = 1;
-			x++;
+			flag = 1;
+			w++;
 		}
 	}
 
-	return (x);
+	return (w);
 }
 /**
  * **strtow - splits a string into words
- * @str: string to spl
+ * @str: string to split
  *
- * Return: point to  strings (Success)
+ * Return: pointer to an array of strings (Success)
  * or NULL (Error)
  */
 char **strtow(char *str)
 {
 	char **matrix, *tmp;
-	int l, m = 0, lan = 0, word, e = 0, strt, and;
+	int i, k = 0, len = 0, words, c = 0, start, end;
 
-	while (*(str + lan))
-		lan++;
-	word = count_word(str);
-	if (word == 0)
+	while (*(str + len))
+		len++;
+	words = count_word(str);
+	if (words == 0)
 		return (NULL);
 
-	matrix = (char **) malloc(sizeof(char *) * (word + 1));
+	matrix = (char **) malloc(sizeof(char *) * (words + 1));
 	if (matrix == NULL)
 		return (NULL);
 
-	for (l = 0; l <= len; l++)
+	for (i = 0; i <= len; i++)
 	{
-		if (str[l] == ' ' || str[l] == '\0')
+		if (str[i] == ' ' || str[i] == '\0')
 		{
-			if (e)
+			if (c)
 			{
-				and = l;
-				tmp = (char *) malloc(sizeof(char) * (e + 1));
+				end = i;
+				tmp = (char *) malloc(sizeof(char) * (c + 1));
 				if (tmp == NULL)
 					return (NULL);
-				while (strt < and)
-					*tmp++ = str[strt++];
+				while (start < end)
+					*tmp++ = str[start++];
 				*tmp = '\0';
-				matrix[m] = tmp - e;
-				m++;
-				e = 0;
+				matrix[k] = tmp - c;
+				k++;
+				c = 0;
 			}
 		}
-		else if (e++ == 0)
-			strt = l;
+		else if (c++ == 0)
+			start = i;
 	}
 
-	matrix[m] = NULL;
+	matrix[k] = NULL;
 
 	return (matrix);
 }
